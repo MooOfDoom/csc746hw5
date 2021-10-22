@@ -1,0 +1,27 @@
+#!/bin/bash -l
+#SBATCH --constraint=gpu
+#SBATCH --cpus-per-task=1
+#SBATCH --qos=debug
+#SBATCH --nodes=1
+#SBATCH --time=00:04:00
+#SBATCH --cpu-freq=1400000
+#SBATCH --job-name=job-gpu
+#SBATCH --output=job-gpu.o%j
+#SBATCH --error=job-gpu.e%j
+
+export LIBOMPTARGETINFO=4
+
+for T in 32 64 128 256 512 1024 # loop over threads per block
+   do
+   
+   for B in 1 4 16 64 256 1024 4096 # loop over number of blocks
+      do
+      
+      echo ========
+      srun -n 1 nvprof ./sobel_gpu $T $B
+
+   done # loop over threads per block
+done # loop over number of blocks
+
+# eof
+
