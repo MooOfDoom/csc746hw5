@@ -12,7 +12,7 @@
 export LIBOMPTARGETINFO=4
 
 echo ""
-srun -n 1 nvprof ./sobel_cpu_omp_offload
+nvprof -m sm_efficiency ./sobel_cpu_omp_offload
 
 # eof
 

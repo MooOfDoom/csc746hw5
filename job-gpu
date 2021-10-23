@@ -3,7 +3,7 @@
 #SBATCH -c 10
 #SBATCH -G 1
 #SBATCH -C gpu
-#SBATCH -t 5:00
+#SBATCH -t 20:00
 #SBATCH -J queue
 #SBATCH --job-name=job-gpu
 #SBATCH --output=job-gpu.o%j
@@ -18,7 +18,7 @@ for T in 32 64 128 256 512 1024 # loop over threads per block
       do
       
       echo ========
-      srun -n 1 nvprof ./sobel_gpu $T $B
+      nvprof -m sm_efficiency ./sobel_gpu $T $B
 
    done # loop over threads per block
 done # loop over number of blocks
