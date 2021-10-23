@@ -1,10 +1,10 @@
 #!/bin/bash -l
-#SBATCH --constraint=gpu
-#SBATCH --cpus-per-task=1
-#SBATCH --qos=debug
-#SBATCH --nodes=1
-#SBATCH --time=00:04:00
-#SBATCH --cpu-freq=1400000
+#SBATCH -N 1
+#SBATCH -c 10
+#SBATCH -G 1
+#SBATCH -C gpu
+#SBATCH -t 5:00
+#SBATCH -J queue
 #SBATCH --job-name=job-offload
 #SBATCH --output=job-offload.o%j
 #SBATCH --error=job-offload.e%j
