@@ -1,0 +1,27 @@
+#!/bin/bash -l
+#SBATCH -N 1
+#SBATCH -c 10
+#SBATCH -G 1
+#SBATCH -C gpu
+#SBATCH -t 20:00
+#SBATCH -J queue
+#SBATCH --job-name=job-gpu-sm
+#SBATCH --output=job-gpu-sm.o%j
+#SBATCH --error=job-gpu-sm.e%j
+
+export LIBOMPTARGETINFO=4
+
+for T in 32 64 128 256 512 1024 # loop over threads per block
+   do
+   
+   for B in 1 4 16 64 256 1024 4096 # loop over number of blocks
+      do
+      
+      echo ========
+      nvprof -m sm_efficiency ./sobel_gpu $T $B
+
+   done # loop over threads per block
+done # loop over number of blocks
+
+# eof
+
