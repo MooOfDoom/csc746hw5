@@ -1,0 +1,336 @@
+==33726== NVPROF is profiling process 33726, command: ./sobel_gpu 32 1
+==33726== Profiling application: ./sobel_gpu 32 1
+==33726== Profiling result:
+==33726== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       1.25%       1.25%       1.25%
+==33770== NVPROF is profiling process 33770, command: ./sobel_gpu 32 4
+==33770== Profiling application: ./sobel_gpu 32 4
+==33770== Profiling result:
+==33770== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       5.00%       5.00%       5.00%
+==33825== NVPROF is profiling process 33825, command: ./sobel_gpu 32 16
+==33825== Profiling application: ./sobel_gpu 32 16
+==33825== Profiling result:
+==33825== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      19.99%      19.99%      19.99%
+==33871== NVPROF is profiling process 33871, command: ./sobel_gpu 32 64
+==33871== Profiling application: ./sobel_gpu 32 64
+==33871== Profiling result:
+==33871== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      79.89%      79.89%      79.89%
+==33914== NVPROF is profiling process 33914, command: ./sobel_gpu 32 256
+==33914== Profiling application: ./sobel_gpu 32 256
+==33914== Profiling result:
+==33914== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      99.84%      99.84%      99.84%
+==33957== NVPROF is profiling process 33957, command: ./sobel_gpu 32 1024
+==33957== Profiling application: ./sobel_gpu 32 1024
+==33957== Profiling result:
+==33957== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      99.52%      99.52%      99.52%
+==34000== NVPROF is profiling process 34000, command: ./sobel_gpu 32 4096
+==34000== Profiling application: ./sobel_gpu 32 4096
+==34000== Profiling result:
+==34000== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      99.09%      99.09%      99.09%
+==34043== NVPROF is profiling process 34043, command: ./sobel_gpu 64 1
+==34043== Profiling application: ./sobel_gpu 64 1
+==34043== Profiling result:
+==34043== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       1.25%       1.25%       1.25%
+==34087== NVPROF is profiling process 34087, command: ./sobel_gpu 64 4
+==34087== Profiling application: ./sobel_gpu 64 4
+==34087== Profiling result:
+==34087== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       5.00%       5.00%       5.00%
+==34130== NVPROF is profiling process 34130, command: ./sobel_gpu 64 16
+==34130== Profiling application: ./sobel_gpu 64 16
+==34130== Profiling result:
+==34130== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      19.98%      19.98%      19.98%
+==34173== NVPROF is profiling process 34173, command: ./sobel_gpu 64 64
+==34173== Profiling application: ./sobel_gpu 64 64
+==34173== Profiling result:
+==34173== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      79.88%      79.88%      79.88%
+==34216== NVPROF is profiling process 34216, command: ./sobel_gpu 64 256
+==34216== Profiling application: ./sobel_gpu 64 256
+==34216== Profiling result:
+==34216== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      99.67%      99.67%      99.67%
+==34259== NVPROF is profiling process 34259, command: ./sobel_gpu 64 1024
+==34259== Profiling application: ./sobel_gpu 64 1024
+==34259== Profiling result:
+==34259== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      99.05%      99.05%      99.05%
+==34302== NVPROF is profiling process 34302, command: ./sobel_gpu 64 4096
+==34302== Profiling application: ./sobel_gpu 64 4096
+==34302== Profiling result:
+==34302== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      97.28%      97.28%      97.28%
+==34346== NVPROF is profiling process 34346, command: ./sobel_gpu 128 1
+==34346== Profiling application: ./sobel_gpu 128 1
+==34346== Profiling result:
+==34346== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       1.25%       1.25%       1.25%
+==34389== NVPROF is profiling process 34389, command: ./sobel_gpu 128 4
+==34389== Profiling application: ./sobel_gpu 128 4
+==34389== Profiling result:
+==34389== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       4.99%       4.99%       4.99%
+==34434== NVPROF is profiling process 34434, command: ./sobel_gpu 128 16
+==34434== Profiling application: ./sobel_gpu 128 16
+==34434== Profiling result:
+==34434== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      19.98%      19.98%      19.98%
+==34477== NVPROF is profiling process 34477, command: ./sobel_gpu 128 64
+==34477== Profiling application: ./sobel_gpu 128 64
+==34477== Profiling result:
+==34477== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      79.88%      79.88%      79.88%
+==34520== NVPROF is profiling process 34520, command: ./sobel_gpu 128 256
+==34520== Profiling application: ./sobel_gpu 128 256
+==34520== Profiling result:
+==34520== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      99.44%      99.44%      99.44%
+==34565== NVPROF is profiling process 34565, command: ./sobel_gpu 128 1024
+==34565== Profiling application: ./sobel_gpu 128 1024
+==34565== Profiling result:
+==34565== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      96.79%      96.79%      96.79%
+==34615== NVPROF is profiling process 34615, command: ./sobel_gpu 128 4096
+==34615== Profiling application: ./sobel_gpu 128 4096
+==34615== Profiling result:
+==34615== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      97.34%      97.34%      97.34%
+==34663== NVPROF is profiling process 34663, command: ./sobel_gpu 256 1
+==34663== Profiling application: ./sobel_gpu 256 1
+==34663== Profiling result:
+==34663== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       1.25%       1.25%       1.25%
+==34706== NVPROF is profiling process 34706, command: ./sobel_gpu 256 4
+==34706== Profiling application: ./sobel_gpu 256 4
+==34706== Profiling result:
+==34706== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       4.99%       4.99%       4.99%
+==34749== NVPROF is profiling process 34749, command: ./sobel_gpu 256 16
+==34749== Profiling application: ./sobel_gpu 256 16
+==34749== Profiling result:
+==34749== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      19.98%      19.98%      19.98%
+==34796== NVPROF is profiling process 34796, command: ./sobel_gpu 256 64
+==34796== Profiling application: ./sobel_gpu 256 64
+==34796== Profiling result:
+==34796== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      79.74%      79.74%      79.74%
+==34852== NVPROF is profiling process 34852, command: ./sobel_gpu 256 256
+==34852== Profiling application: ./sobel_gpu 256 256
+==34852== Profiling result:
+==34852== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      95.45%      95.45%      95.45%
+==34900== NVPROF is profiling process 34900, command: ./sobel_gpu 256 1024
+==34900== Profiling application: ./sobel_gpu 256 1024
+==34900== Profiling result:
+==34900== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      93.43%      93.43%      93.43%
+==34943== NVPROF is profiling process 34943, command: ./sobel_gpu 256 4096
+==34943== Profiling application: ./sobel_gpu 256 4096
+==34943== Profiling result:
+==34943== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      98.44%      98.44%      98.44%
+==34986== NVPROF is profiling process 34986, command: ./sobel_gpu 512 1
+==34986== Profiling application: ./sobel_gpu 512 1
+==34986== Profiling result:
+==34986== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       1.25%       1.25%       1.25%
+==35047== NVPROF is profiling process 35047, command: ./sobel_gpu 512 4
+==35047== Profiling application: ./sobel_gpu 512 4
+==35047== Profiling result:
+==35047== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       4.99%       4.99%       4.99%
+==35107== NVPROF is profiling process 35107, command: ./sobel_gpu 512 16
+==35107== Profiling application: ./sobel_gpu 512 16
+==35107== Profiling result:
+==35107== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      19.87%      19.87%      19.87%
+==35152== NVPROF is profiling process 35152, command: ./sobel_gpu 512 64
+==35152== Profiling application: ./sobel_gpu 512 64
+==35152== Profiling result:
+==35152== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      78.99%      78.99%      78.99%
+==35341== NVPROF is profiling process 35341, command: ./sobel_gpu 512 256
+==35341== Profiling application: ./sobel_gpu 512 256
+==35341== Profiling result:
+==35341== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      91.00%      91.00%      91.00%
+==35546== NVPROF is profiling process 35546, command: ./sobel_gpu 512 1024
+==35546== Profiling application: ./sobel_gpu 512 1024
+==35546== Profiling result:
+==35546== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      90.05%      90.05%      90.05%
+==35590== NVPROF is profiling process 35590, command: ./sobel_gpu 512 4096
+==35590== Profiling application: ./sobel_gpu 512 4096
+==35590== Profiling result:
+==35590== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      98.22%      98.22%      98.22%
+==35636== NVPROF is profiling process 35636, command: ./sobel_gpu 1024 1
+==35636== Profiling application: ./sobel_gpu 1024 1
+==35636== Profiling result:
+==35636== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       1.25%       1.25%       1.25%
+==35679== NVPROF is profiling process 35679, command: ./sobel_gpu 1024 4
+==35679== Profiling application: ./sobel_gpu 1024 4
+==35679== Profiling result:
+==35679== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity       4.99%       4.99%       4.99%
+==35722== NVPROF is profiling process 35722, command: ./sobel_gpu 1024 16
+==35722== Profiling application: ./sobel_gpu 1024 16
+==35722== Profiling result:
+==35722== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      19.91%      19.91%      19.91%
+==35772== NVPROF is profiling process 35772, command: ./sobel_gpu 1024 64
+==35772== Profiling application: ./sobel_gpu 1024 64
+==35772== Profiling result:
+==35772== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      78.96%      78.96%      78.96%
+==35818== NVPROF is profiling process 35818, command: ./sobel_gpu 1024 256
+==35818== Profiling application: ./sobel_gpu 1024 256
+==35818== Profiling result:
+==35818== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      89.65%      89.65%      89.65%
+==35861== NVPROF is profiling process 35861, command: ./sobel_gpu 1024 1024
+==35861== Profiling application: ./sobel_gpu 1024 1024
+==35861== Profiling result:
+==35861== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      93.02%      93.02%      93.02%
+==35904== NVPROF is profiling process 35904, command: ./sobel_gpu 1024 4096
+==35904== Profiling application: ./sobel_gpu 1024 4096
+==35904== Profiling result:
+==35904== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: sobel_kernel_gpu(float*, float*, int, int, int, float*, float*)
+          1                             sm_efficiency                   Multiprocessor Activity      98.25%      98.25%      98.25%
