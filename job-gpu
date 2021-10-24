@@ -18,7 +18,7 @@ for T in 32 64 128 256 512 1024 # loop over threads per block
       do
       
       echo ========
-      nvprof -m sm_efficiency ./sobel_gpu $T $B
+      nvprof ./sobel_gpu $T $B
 
    done # loop over threads per block
 done # loop over number of blocks
