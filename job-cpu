@@ -6,7 +6,7 @@
 #SBATCH --time=00:04:00
 #SBATCH --cpu-freq=1400000
 #SBATCH --job-name=job-cpu
-#SBATCH --output=job-cpuo%j
+#SBATCH --output=job-cpu.o%j
 #SBATCH --error=job-cpu.e%j
 
 # set some openmp variables: 

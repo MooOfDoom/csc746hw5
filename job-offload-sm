@@ -9,9 +9,8 @@
 #SBATCH --output=job-offload-sm.o%j
 #SBATCH --error=job-offload-sm.e%j
 
-export LIBOMPTARGETINFO=4
+export LIBOMPTARGET_INFO=4
 
-echo ""
 nvprof -m sm_efficiency ./sobel_cpu_omp_offload
 
 # eof

@@ -9,7 +9,7 @@
 #SBATCH --output=job-gpu.o%j
 #SBATCH --error=job-gpu.e%j
 
-export LIBOMPTARGETINFO=4
+export LIBOMPTARGET_INFO=4
 
 for T in 32 64 128 256 512 1024 # loop over threads per block
    do
@@ -17,7 +17,6 @@ for T in 32 64 128 256 512 1024 # loop over threads per block
    for B in 1 4 16 64 256 1024 4096 # loop over number of blocks
       do
       
-      echo ========
       nvprof ./sobel_gpu $T $B
 
    done # loop over threads per block
