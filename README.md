@@ -1,11 +1,11 @@
-# sobel-harness-instructional
+# sobel-filter-cpu-gpu
 
-This directory contains the code harnesses for doing three different implementation of a Sobel edge detection
+This directory contains the code for three different implementations of a Sobel edge detection
 filter. The three implementations are:
 
-* CPU only in C++, with your added OpenMP parallelism
+* CPU only in C++, with OpenMP parallelism
 * GPU only in CUDA
-* CPU n C++ with OpenMP Device Offload for running on the GPU
+* CPU in C++ with OpenMP Device Offload for running on the GPU
 
 # Build instructions - general
 
@@ -46,18 +46,6 @@ of data and image size if you like.
 The image provided with the distribution, located in the data subdirectory, is of a sufficient size , 7112x5146, to
 cause the CPU and GPU to do a non-trivial amount of work. More information about these data are located below.
 
-# Adding your code to sobel_cpu.cpp
-
-Start here because you want the algorithm to work properly first on a CPU and in serial.
-
-You will need to add code inside two routines:
-
-* do_sobel_filtering() is where you will iterate over all input (i,j) pixels and then invoke the sobel_filtered_pixel() function, and then assign the computed value to the (i,j) location in the output.
-* sobel_filtered_pixel(), is where you will perform the Sobel stencil computation, convolving the 3x3 x- and y- filter weights with the 3x3 pixel window surrounding the (i,j) location in the input
-
-For OpenMP parallelism in this code, focus your attention on the do_sobel_filtering() function, and
-implement loop parallelism over the one or two for loops that iterate over the input image.
-
 # Testing and verifying your computations
 
 For all programs, when you run the code, it reads from a hard-coded data file, and writes to a hard-coded output file, also located in the data subdirectory. Each of the 3 different codes writes to a different named file, e.g., processed-raw-int8-4x-cpu.dat, processed-raw-int8-4x-gpu.dat, etc.
@@ -71,37 +59,6 @@ This will display the results of the "correct results" of the sobel filter appli
 Note: if you're running this script from Cori, please be sure that you:
 * ssh -Y user@cori.nersc.gov when you connect so that X connections are tunneled through ssh, and the image will actually display remotely, and
 * do a %module load python    otherwise you will be accessing an outdated version of python.
-
-# Adding your code to the sobel_gpu.cu
-
-Next, head over to sobel_gpu.cu to work on the CUDA implementation of your sobel filter.
-
-Here, you will need to add code to sobel_filtered_pixel() and sobel_kernel_gpu(). The sobel_filtered_pixel() code on the GPU might be nearly identical to your CPU code.
-
-For the sobel_kernel_gpu() function, you will need to think like a CUDA coder and look at CUDA variables --  blockIdx, blockDim, threadIdx, blockDim and gridDim --  to compute the index/stride to use in striding through the source 
-array, calling the sobel_filtered_pixel() function at each location to do the work.
-
-You will probably use a processing motif here very similar to what we did in Lab#2, vector addition in CUDA.
-
-# Adding code to the sobel_cpu_omp_offload.cpp
-
-Here, you will need to add your code to the sobel_filtered_pixel() and do_sobel_filtering() functions.
-
-Your sobel_filtered_pixel() code is likely identical to that for your sobel_cpu.cpp implementation.
-
-Inside the do_sobel_filtering() function, you will need to add the code that iterates over every (i,j)
-location of input and calls the sobel_filtered_pixel() method.
-
-You will also need to add the following line of code:
-
- #pragma omp target teams parallel for  
-
-around those loops to iterate over very (i,j) location of input. You may also wish to consider additional clauses that might be appropriate here to increase parallelism if you are using nested loops.
-
-You will also need to add one more item to the line reading #pragma omp target data (...). As written, that line of code maps the input data and parameters to the device, but it does not have a map() statement to pull the data back from the device. You need to add that one more item to this line in order to have the results come back from the GPU. 
-
-For additional reading, slide #22 on this URL may be helpful: https://www.nersc.gov/assets/Uploads/OpenMPTrainingShortAdvanced.pdf
-
 
 # Information about data files
 
@@ -122,4 +79,51 @@ imshow.py - a python script to display the raw 8-bit pixel values in grayscale.
 Usage:  
     python imshow.py filename-of-raw-8bit-bytes int-cols-width int-rows-height
 
+# Running the CPU code
 
+In order to run on a KNL node on Cori, it seems one must do a module purge before salloc'ing an interactive KNL node. Once on the node, you can set up the environment again as in the build instructions above. Navigate to the build directory and type:
+
+% export OMP_PLACES=threads
+% export OMP_PROC_BIND=spread
+% export OMP_NUM_THREADS=16
+% ./sobel_cpu
+
+To run with a different number of threads, just do exportOMP_NUM_THREADS=x before running again, where x is the desired number of threads.
+
+# Running the CUDA code
+
+In the build directory, type
+
+% ./sobel_gpu
+
+This will run the GPU code with the default configuration of 256 threads per block and 1 block. In order to specify a different configuration, two optional command line arguments may be given, which specify the number of threads per block and the number of blocks, respectively. For instance, to run 64 threads per block with 256 blocks, the command is
+
+% ./sobel_gpu 64 256
+
+In order to gather performance data for the run, you can type
+
+% export LIBOMPTARGET_INFO=4
+
+Then use nvprof like so:
+
+% nvprof ./sobel_gpu 64 256
+
+To collect SM efficiency data, you can run
+
+% nvprof -m sm_efficiency ./sobel_gpu 64 256
+
+In order to facilitate the collection of this data for all 42 mandated configurations, you can run the script
+
+% sbatch ../job-gpu
+
+This outputs the profiling information in job-gpu.eXXXXXXXX, where XXXXXXXX is the job number assigned to the sbatch. Similarly, for the SM efficiency data, run
+
+% sbatch ../job-gpu-sm
+
+# Running the OpenMP-offload code
+
+From the build directory type
+
+% ./sobel_cpu_omp_offload
+
+Profiling information can be gathered from nvprof analogously to the CUDA code, above, including the batch scripts ../job-offload and ../job-offload-sm.
